@@ -56,9 +56,9 @@
 <!-- /.login-box -->
 
 <!-- jQuery 2.2.3 -->
-<script src="privasi/public/bower_components/AdminLTE/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script src="bower_components/AdminLTE/plugins/jQuery/jquery-2.2.3.min.js"></script>
 <!-- Bootstrap 3.3.6 -->
-<script src="privasi/public/bower_components/AdminLTE/bootstrap/js/bootstrap.min.js"></script>
+<script src="bower_components/AdminLTE/bootstrap/js/bootstrap.min.js"></script>
 <!-- iCheck -->
 
 
