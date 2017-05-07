@@ -51,11 +51,12 @@ class UserController extends Controller
         $data=User::find($id);
         if(is_null($data))
 	    {
-	        return Response::json("not found",404);
+	        // return Response::json("not found",404);
+            return response()->json(['status' => 'not found']);
 	    }
  
-        // return response()->json(['status' => 'success', 'data' => $data]);
-        return Response::json($data,200);
+        return response()->json(['status' => 'success', 'data' => $data]);
+        // return Response::json($data,200);
         
     }
 
