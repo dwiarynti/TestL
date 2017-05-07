@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="RDash">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,11 +19,26 @@
   <link rel="stylesheet" href="bower_components/AdminLTE/dist/css/AdminLTE.min.css">
   <link rel="stylesheet" href="bower_components/AdminLTE/dist/css/skins/skin-black.min.css">
 
+  <!--library-->
+  <script src="angular/plugins/angular/angular.js"></script>
+  <script src="angular/plugins/angular/ocLazyLoad.min.js"></script>
+  <script src="angular/plugins/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="angular/plugins/angular/angular-resource.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!--plugins-->
+  <script src="angular/route.js"></script>
+
+
 </head>
 
-<body class="hold-transition skin-black  sidebar-mini">
+<body class="hold-transition skin-black  sidebar-mini" ng-controller="mastercontroller">
+
+
 @if(Auth::check()) 
 <div class="wrapper">
+
     <!-- Header -->
     @include('header')
 
@@ -45,10 +60,9 @@
     </section>
 
     <!-- Main content -->
-    <section class="content">
-
+    <section class="content" ui-view>
       <!-- Your Page Content Here -->
-         @yield('content')
+         <!--@yield('conteknt')-->
     </section>
     <!-- /.content -->
   </div>
@@ -94,6 +108,15 @@
 <!-- AdminLTE App -->
 <script src="bower_components/AdminLTE/dist/js/app.min.js"></script>
 
+    <!--service-->
+<script src="angular/services/common.service.js"></script>
+<script src="angular/services/sampleResource.js"></script>
+<script src="angular/services/passingdata.service.js"></script>
+
+
+    <!--controller-->
+<script src="angular/controllers/Master.js"></script>
+<script src="angular/controllers/sample-ctrl.js"></script>
 
 </body>
 </html>

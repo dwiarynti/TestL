@@ -18,7 +18,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#">Nota Pejalanan Dinas</a></li>
+            <li><a href="#sample-index">Nota Pejalanan Dinas</a></li>
             <li><a href="#">Surat Perintah Tugas</a></li>
           </ul>
         </li>
