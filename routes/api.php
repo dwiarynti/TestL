@@ -19,5 +19,11 @@ use Illuminate\Http\Request;
 // Route::resource('user','UserController',['except' => ['create','edit']]);
 
 //user routes
-Route::get('user','UserController@index');
-Route::get('user/{id}','UserController@show');
+// Route::get('user','UserController@index');
+Route::get('user/{id}','UserController@show', function (Request $request) {
+    return $request->show();
+});
+
+Route::get('/user' ,'UserController@index', function (Request $request) {
+    return $request->index();
+});
