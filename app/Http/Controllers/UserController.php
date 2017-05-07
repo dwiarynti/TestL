@@ -21,9 +21,11 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($nama)
     {
         //
+       return response()->json(['status' => 'success', 'data' => $nama]);
+        
     }
 
     /**
@@ -46,6 +48,15 @@ class UserController extends Controller
     public function show($id)
     {
         //
+        $data=User::find($id);
+        if(is_null($data))
+	    {
+	        return Response::json("not found",404);
+	    }
+ 
+        // return response()->json(['status' => 'success', 'data' => $data]);
+        return Response::json($data,200);
+        
     }
 
     /**
