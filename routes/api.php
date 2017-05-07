@@ -27,3 +27,7 @@ Route::get('user/{id}','UserController@show', function (Request $request) {
 Route::get('/user' ,'UserController@index', function (Request $request) {
     return $request->index();
 });
+
+Route::resource('user','UserController',['except' => ['create','edit']]);
+Route::resource('book','BookController',['except' => ['create','edit']]);
+Route::resource('golongan','GolonganController');
