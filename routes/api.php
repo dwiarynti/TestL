@@ -17,3 +17,5 @@ use Illuminate\Http\Request;
 //     return $request->user();
 // })->middleware('auth:api');
 Route::resource('user','UserController',['except' => ['create','edit']]);
+Route::resource('book','BookController',['except' => ['create','edit']]);
+Route::resource('golongan','GolonganController');
