@@ -13,20 +13,16 @@ use Illuminate\Http\Request;
 |
 */
 
-// Route::get('/user', function (Request $request) {
-//     return $request->user();
-// })->middleware('auth:api');
-// Route::resource('user','UserController',['except' => ['create','edit']]);
 
 //user routes
-// Route::get('user','UserController@index');
+Route::get('/user' ,'UserController@index', function (Request $request) {
+    return $request->index();
+});
 Route::get('user/{id}','UserController@show', function (Request $request) {
     return $request->show();
 });
 
-Route::get('/user' ,'UserController@index', function (Request $request) {
-    return $request->index();
-});
+
 
 Route::resource('user','UserController',['except' => ['create','edit']]);
 Route::resource('book','BookController',['except' => ['create','edit']]);
