@@ -17,11 +17,11 @@ use Illuminate\Http\Request;
 //user routes
 Route::get('/user' ,'UserController@index', function (Request $request) {
     return $request->index();
-});
+})->middleware('auth:api');
+
 Route::get('user/{id}','UserController@show', function (Request $request) {
     return $request->show();
 });
-
 
 
 Route::resource('user','UserController',['except' => ['create','edit']]);
